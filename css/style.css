@@ -2,12 +2,27 @@
 .center { text-align: center;}
 .left { text-align: left;}
 .right { text-align:right;}
-.top-space { margin-top:26px;}
+.justify { text-align:justify;}
+.top-space { margin-top:12px;}
 .bottom-space { margin-bottom:26px;}
+.underline { text-decoration: undeline;}
 .container-fluid { overflow-x:hidden;}
-.header { margin: 50px auto 30px auto; }
-.cover { padding:0;}
-.striped { width:100%; height:20px; overflow:hidden; background: url('bg/diag-stripe.png') repeat-x;
+body { margin:0; padding:0; overflow-x:hidden;}
+/* header */
+header h1 { font-size:3.5em; font-family: 'Raleway', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;}
+.cover { padding:0; position:absolute; width:100%; top:90px; height:750px;}
+.email-btn, .twitter-btn { width:54px;height:50px;position:fixed; z-index:100; background:#4d4d4d;}
+.email-btn img, .twitter-btn img { width:70%; margin:5px auto; }
+.email-btn { /*background: rgb(224, 119, 88);*/ right:56px;}
+.twitter-btn {/* background: rgb(126, 166, 237);*/ right:0;}
+/*skills section */
+.skills { margin-top:40px;}
+.skills ul {padding-left:0; margin-top:10px;}
+.skills ul li { list-style: none; margin-left:0; font-size:14px; color:#333; line-height:18px;}
+a.rectangle-btn { text-align:center; color:#353535; padding:10px 25px; border:2px solid #353535; text-transform:uppercase;}
+a.rectangle-btn:hover { background: rgba(0,0,0,0.1); text-decoration:none;}
+
+.striped { width:100%; height:20px; overflow:hidden; background: url('../img/diag-stripe.png') repeat-x;
 }
 .links a { color:#ccc; font-size:2em;}
 .links a:hover, .links a:active, .links a:focus { color: #333;}
