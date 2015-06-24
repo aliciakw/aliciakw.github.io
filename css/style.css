@@ -3,14 +3,28 @@
 .left { text-align: left;}
 .right { text-align:right;}
 .justify { text-align:justify;}
-.top-space { margin-top:12px;}
+.top-space { margin-top:18px;}
+.spacer { margin-bottom:40px;}
 .bottom-space { margin-bottom:26px;}
-.underline { text-decoration: undeline;}
+.underline { text-decoration: underline;}
 .container-fluid { overflow-x:hidden;}
-body { margin:0; padding:0; overflow-x:hidden;}
+.charcoal-bg { color:#e6e6e6;background-color:#353535;}
+.black-bg { color:#e6e6e6;background-color:#1a1a1a;}
+.white { color: #fff;}
+.light-gray { color:#ddd;}
+.pink { color: rgb(208, 159, 179);}
+.green { color:rgb(159, 208, 189);}
+.blue { color: rgb(159, 199, 208);}
+.yellow { color: rgb(208, 192, 141);}
+.gray { color: #ccc;}
+.dark-gray { color: #7e7e7e;}
+body { margin:0; padding:0; overflow-x:hidden; background-color:#fefefe;}
+h1, .h1, h2, .h2, h4,.h4, h5,.h5, h6,.h6, footer { font-family: 'Raleway', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;}
+a { color:rgb(159, 208, 189);}
+a:hover { color:rgb(208, 159, 179);}
 /* header */
-header h1 { font-size:3.5em; font-family: 'Raleway', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;}
-.cover { padding:0; position:absolute; width:100%; top:90px; height:750px;}
+header h1 { font-size:3.5em;}
+.cover { padding:60px 0 0 0; position:absolute; width:100%; top:0px; height:750px;}
 .email-btn, .twitter-btn { width:54px;height:50px;position:fixed; z-index:100; background:#4d4d4d;}
 .email-btn img, .twitter-btn img { width:70%; margin:5px auto; }
 .email-btn { /*background: rgb(224, 119, 88);*/ right:56px;}
@@ -27,10 +41,20 @@ a.rectangle-btn:hover { background: rgba(0,0,0,0.1); text-decoration:none;}
 .links a { color:#ccc; font-size:2em;}
 .links a:hover, .links a:active, .links a:focus { color: #333;}
 
-.illustrations { padding-left:0; padding-right:0;}
-.illustrations img { width:100%; max-width:900px;}
-.copy { padding:20px 40px; border-top:1px solid #ccc;}
+/* projects section */
+section#projects { margin-top:-5px;}
+
+.illustrations { padding:20px;}
+.illustrations img { width:80%; max-width:900px;}
 .copy ul { padding-left:15px;}
+
+
+/* footer */
+footer { padding-top:40px; padding-bottom:40px;}
+
+
+
+
 
 .clamav { 
   color:#323232;
