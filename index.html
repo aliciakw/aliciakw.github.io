@@ -3,28 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Alicia WILLETT</title>
+  <link rel="shortcut icon" href="img/fav.png">
   <style>
 @import url(https://fonts.googleapis.com/css?family=Share:400,400italic);
-header { font-family: 'Share', 'Helvetica', sans-serif; color:#333; margin:60px auto 20px auto; max-width:500px;}
-header h1 { text-align:right; font-size:58px; margin:0;}
+body { color:#333; font-family:'Helvetica Neue', 'Helvetica', sans-serif; }
+.left { text-align: left; }
+.right { text-align: right; }
+.center { text-align: center; }
+p { font-size: 14px; }
+header { font-family: 'Share', 'Helvetica', sans-serif; margin:60px auto 10px auto; max-width:500px;}
+header h1 { font-size:58px; margin:0;}
 header h2 { font-size:36px; margin-bottom:10px;}
-.main { text-align:center; font-family:'Helvetica Neue';}
-
+.main { margin:10px auto 10px auto; max-width:500px; }
+.gif-wrapper { text-align: center; margin-bottom: 10px; }
+a { color: #0ABB9D; text-decoration: none; }
+.btn {
+  padding: 4px 8px; border-radius: 5px; color: #333; background:#ccc; font-weight: bold; letter-spacing: 2px; text-decoration: none;
+  -webkit-transition: opacity .5s ease-in-out; -moz-transition: opacity .5s ease-in-out; -o-transition: opacity .5s ease-in-out; -ms-transition: opacity .5s ease-in-out; transition: opacity .5s ease-in-out;
+}
+.btn--rainbow {
+  background-image: linear-gradient(
+    -45deg,
+    #F9C4E4 15%, #FAFFB3 15%,
+    #FAFFB3 30%, #BFF7C8 30%,
+    #BFF7C8 45%, #BDE5EC 45%,
+    #BDE5EC 60%, #F9C4E4 60%,
+    #F9C4E4 75%, #FAFFB3 60%,
+    #FAFFB3 90%, #BFF7C8 90%
+  );
+}
+.btn:hover { opacity: 0.7;}
+.text--with-buttons { line-height: 200%; }
+.wrapper--gif { text-align: center; }
   </style>
 </head>
   <body>
     <header>
       <h2>hi, you've reached</h2>
-      <h1>Alicia Willett</h1>
+      <h1 class="right">Alicia Willett</h1>
     </header>
     <section class="main">
-      <p>If I were a gif, I would be:</p>
-      <div id="random-gif">
-      <!-- <img src="http://i.giphy.com/IpgDoNO1914qY.gif"/> -->
+      <div class="gif-wrapper">
+        <p>If I were a gif, I would be:</p>
+        <div id="gif-target"></div>
       </div>
-      <p>But maybe you were looking for something more serious?</p>
-      <p><a>download cv</a> or check out things I've been playing around with on <a href="https://github.com/aliciakw" target="_blank">github</a>.</p>
-      <p>Say hello at alicia.willett@gmail.com</p>
+      <h4>...but maybe you were looking for something more serious?</h4>
+      <p class="left text--with-buttons">Download my <a class="btn btn--rainbow" href="download/Willett-Resume-2016.pdf" target="_blank">resume</a> or<br/>check out things I've been playing around with on <a class="btn btn--striped" href="https://github.com/aliciakw" target="_blank">github</a></p>
+      <p>Say hello at <a href="mailto:alicia.willett@gmail.com"><strong>alicia.willett@gmail.com</strong></a>.</p>
     </section>
     <script src="js/jquery.min.js"></script>
     <script>
@@ -38,10 +63,9 @@ header h2 { font-size:36px; margin-bottom:10px;}
         },
         success: function(response){
           var gif = document.createElement('img');
-          var choice = Math.ceil(3 * Math.random()) - 1;
-          var src = "http://i.giphy.com/" + response.data[choice].id + ".gif";
+          var src = "http://i.giphy.com/" + response.data[0].id + ".gif";
           gif.setAttribute('src', src);
-          $('#random-gif').append(gif);
+          $('#gif-target').append(gif);
         },
         error: function(){
           console.log("ERROR getting GIF");
