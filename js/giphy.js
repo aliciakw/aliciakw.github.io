@@ -4,6 +4,7 @@ $(document).ready(function(){
     data: {
       q: 'alicia',
       api_key: 'dc6zaTOxFJmzC',
+      rating: 'g',
       limit: 3
     },
     success: function(response){
